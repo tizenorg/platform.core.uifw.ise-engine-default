@@ -1,9 +1,9 @@
 Name:       ise-engine-default
 Summary:    Multilingual Keyboard ISE
-Version:    0.1.4315
+Version:    0.1.5023
 Release:    1
 Group:      TO_BE/FILLED_IN
-License:    TO_BE/FILLED_IN
+License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(isf)
 
