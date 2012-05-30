@@ -5,6 +5,7 @@ Release:    1
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
+Source1001: packaging/ise-engine-default.manifest 
 BuildRequires:  pkgconfig(isf)
 
 %description
@@ -15,6 +16,7 @@ it is based on Input Service Framework(ISF).
 %setup -q
 
 %build
+cp %{SOURCE1001} .
 
 ./bootstrap
 %configure --prefix=%{_prefix} --disable-static
@@ -27,6 +29,7 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest ise-engine-default.manifest
 %defattr(-,root,root,-)
 /usr/lib/scim-1.0/1.4.0/IMEngine/ise-engine-default.so
 /usr/share/scim/icons/isf-default.png
