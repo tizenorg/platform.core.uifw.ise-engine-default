@@ -1,6 +1,7 @@
+#sbs-git:slp/pkgs/i/ise-engine-default ise-engine-default 0.1.4911 f634a59ecb8104768dec809386789faac1a3c121
 Name:       ise-engine-default
 Summary:    Multilingual Keyboard ISE
-Version:    0.1.4315
+Version:    0.1.5023
 Release:    1
 Group:      TO_BE/FILLED_IN
 License:    TO_BE/FILLED_IN

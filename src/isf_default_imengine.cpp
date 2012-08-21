@@ -283,9 +283,9 @@ bool DefaultInstance::keypad_process_qwerty(KeyEvent & key) {
 
 	/* in case of Alphabet chars */
 	if (key.code >= 0xfd00)
-        return false;//ISF handle function keys 
-    else if (key.code >= 0x4E00 && key.code <= 0x9FBF)
-        return true;//Don't deal with Chinese characters
+		return false;//ISF handle function keys
+	else if (key.code >= 0x4E00 && key.code <= 0x9FBF)
+		return true;//Don't deal with Chinese characters
 
 	utf8_wctomb(buf, key.code, UTF8_SIZE);
 
