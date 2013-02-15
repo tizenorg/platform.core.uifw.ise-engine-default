@@ -1,7 +1,7 @@
 /*
  *  ise-engine-default
  *
- * Copyright (c) 2000 - 2011 Samsung Electronics Co., Ltd. All rights reserved.
+ * Copyright (c) 2012-2013 Samsung Electronics Co., Ltd. All rights reserved.
  *
  * Contact: Li zhang <li2012.zhang@samsung.com>
  *
@@ -56,8 +56,6 @@
 #define DEFAULT_NAME "Multilingual/Keyboard"
 #define ISF_CONFIG_HARDWARE_KEYBOARD_DETECT "/isf/hw_keyboard_detect"
 
-#define TIME_COUNT                      1   /*muti tap interval (seconds) */
-#define FLUSH_KEY                       0x8001
 #define UTF8_SIZE                       6
 
 #ifndef ISF_DEFAULT_ICON_FILE
@@ -174,7 +172,7 @@ DefaultFactory::create_instance(const String & encoding, int id) {
 	return new DefaultInstance(this, encoding, id);
 }
 
-/* Initialize member varialbes */
+/* Initialize member variables */
 unsigned int DefaultInstance::m_prevkeyval = 0;
 int DefaultInstance::m_counter = 0;
 
@@ -283,9 +281,9 @@ bool DefaultInstance::keypad_process_qwerty(KeyEvent & key) {
 
 	/* in case of Alphabet chars */
 	if (key.code >= 0xfd00)
-        return false;//ISF handle function keys 
-    else if (key.code >= 0x4E00 && key.code <= 0x9FBF)
-        return true;//Don't deal with Chinese characters
+		return false;//ISF handle function keys
+	else if (key.code >= 0x4E00 && key.code <= 0x9FBF)
+		return true;//Don't deal with Chinese characters
 
 	utf8_wctomb(buf, key.code, UTF8_SIZE);
 

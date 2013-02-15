@@ -1,7 +1,7 @@
 /*
  *  ise-engine-default
  *
- * Copyright (c) 2000 - 2011 Samsung Electronics Co., Ltd. All rights reserved.
+ * Copyright (c) 2012-2013 Samsung Electronics Co., Ltd. All rights reserved.
  *
  * Contact: Li zhang <li2012.zhang@samsung.com>
  *
