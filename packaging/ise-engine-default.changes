@@ -1,0 +1,5 @@
+* Thu Jan 31 2013 Jihoon Kim <jihoon48.kim@samsung.com> accepted/tizen_2.0/20130123.092613@1437977
+- fix hardcoded-library path
+- Remove unused code
+- Support --no-configure in GBS
+
