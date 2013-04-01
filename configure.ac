@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(ise-default, 0.1.1, li2012.zhang@samsung.com)
+AC_INIT(ise-default, 0.1.5023, li2012.zhang@samsung.com)
 AC_CONFIG_SRCDIR([src/isf_default_imengine.cpp])
 
 # Save this value here, since automake will set cflags and cxxflags later
@@ -8,7 +8,7 @@ cppflags_set=${CPPFLAGS+set}
 
 ISF_DEFAULT_MAJOR_VERSION=0
 ISF_DEFAULT_MINOR_VERSION=1
-ISF_DEFAULT_MICRO_VERSION=1
+ISF_DEFAULT_MICRO_VERSION=5023
 
 ISF_DEFAULT_VERSION=$ISF_DEFAULT_MAJOR_VERSION.$ISF_DEFAULT_MINOR_VERSION.$ISF_DEFAULT_MICRO_VERSION
 

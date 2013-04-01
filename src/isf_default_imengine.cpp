@@ -242,6 +242,7 @@ void DefaultInstance::flush() {
 }
 
 void DefaultInstance::focus_in() {
+	hide_lookup_table();
 }
 
 void DefaultInstance::focus_out() {
