@@ -258,9 +258,15 @@ bool DefaultInstance::_process_keyrelease(const KeyEvent & key) {
 
 bool DefaultInstance::_process_keypress(const KeyEvent & key_raw) {
 	KeyEvent key = key_raw;
-	unsigned int keyvalue;
+	unsigned int keyvalue = key.code;
 
-	keyvalue = key.code;
+	if (key.is_control_down() || key.is_alt_down())
+		return false;
+
+	if (key.code == SCIM_KEY_NullKey || key.code == SCIM_KEY_Cancel) {
+		m_prevkeyval = keyvalue;
+		return false;
+	}
 
 	if (m_lang >= IM_LANGUAGE_CNT) {
 		return false;
