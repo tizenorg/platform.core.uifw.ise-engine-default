@@ -53,7 +53,7 @@
 #endif
 
 #define DEFAULT_UUID "d75857a5-4148-4745-89e2-1da7ddaf7999"
-#define DEFAULT_NAME "Multilingual/Keyboard"
+#define DEFAULT_NAME "Multilingual Keyboard"
 #define ISF_CONFIG_HARDWARE_KEYBOARD_DETECT "/isf/hw_keyboard_detect"
 
 #define UTF8_SIZE                       6
