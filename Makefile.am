@@ -34,7 +34,7 @@ EXTRA_DIST = \
 ## @end 1
 
 AUTOMAKE_OPTIONS 	= gnu
-SUBDIRS 		= m4 src data
+SUBDIRS 		= src data
 ## @start 1
 MAINTAINERCLEANFILES 	= Makefile.in aclocal.m4 configure config.h.in $(AUX_DIST)
 

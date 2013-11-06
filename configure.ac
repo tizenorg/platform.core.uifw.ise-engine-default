@@ -110,7 +110,6 @@ ISF_DEFAULT_DATADIR=${ISF_DATADIR}/ise-engine-default
 AC_SUBST(ISF_DEFAULT_DATADIR)
 
 AC_CONFIG_FILES([Makefile
-		 m4/Makefile
 		 src/Makefile
 		 data/Makefile])
 
