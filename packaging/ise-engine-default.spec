@@ -1,6 +1,6 @@
 Name:       ise-engine-default
 Summary:    Multilingual Keyboard ISE
-Version:    0.1.5023
+Version:    0.1.5024
 Release:    7
 Group:      System Environment/Libraries
 License:    Apache License, Version 2.0
@@ -15,7 +15,7 @@ it is based on Input Service Framework(ISF).
 %setup -q
 
 %build
-
+./bootstrap
 %autogen
 %configure --prefix=%{_prefix} --disable-static
 
