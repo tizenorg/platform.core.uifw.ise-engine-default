@@ -54,7 +54,6 @@
 
 #define DEFAULT_UUID "d75857a5-4148-4745-89e2-1da7ddaf7999"
 #define DEFAULT_NAME "Multilingual Keyboard"
-#define ISF_CONFIG_HARDWARE_KEYBOARD_DETECT "/isf/hw_keyboard_detect"
 
 #define UTF8_SIZE                       6
 
@@ -100,7 +99,6 @@ DefaultFactory::DefaultFactory(const ConfigPointer & config)
 : m_config(config) {
 	m_uuid = DEFAULT_UUID;
 	m_name = _(DEFAULT_NAME);
-	m_lang = "Other";
 
 	set_languages
 	("nl_NL,nl_BE,en_US,en_GB,en_AU,en_CA,en_NZ,en_IE,en_ZA,en_JM,"
@@ -161,7 +159,6 @@ String DefaultFactory::get_icon_file() const {
 
 void DefaultFactory::reload_config(const ConfigPointer & config) {
 	if (config.null()) return;
-	m_lang = config->read(String(SCIM_CONFIG_SYSTEM_INPUT_LANGUAGE), m_lang);
 	int hw_detected = config->read(String (ISF_CONFIG_HARDWARE_KEYBOARD_DETECT) , hw_detected);
 	if (hw_detected == 1)
 		m_keypad_layout = I_HQD;

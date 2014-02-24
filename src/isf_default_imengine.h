@@ -41,7 +41,6 @@ typedef enum {
 class DefaultFactory:public IMEngineFactoryBase {
 	String m_uuid;
 	String m_name;
-	String m_lang;
 
 	ConfigPointer m_config;
 	Connection m_reload_signal_connection;
