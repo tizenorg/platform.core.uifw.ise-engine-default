@@ -49,13 +49,6 @@ AM_CONDITIONAL(ARM, test x$TARGET = xARM)
 ISF_VERSION=1.0.0
 
 PKG_CHECK_MODULES(ISF,[isf >= $ISF_VERSION])
-
-# Check if we should build setup module
-PKG_CHECK_MODULES(ISF_GTKUTILS,[isf-gtkutils >= $ISF_VERSION],
-		  		[ISF_HAS_GTKUTILS=yes],
-				[ISF_HAS_GTKUTILS=no])
-
-
 AC_SUBST(ISF_VERSION)
 
 # Checks for header files.
