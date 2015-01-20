@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="ise-engine-default" type="rpm" version="1.0.0" install-location="internal-only" support-mode="screen-reader">
+<author/>
+<description/>
+<label>Default keyboard</label>
+<icon/>
+<ui-application appid="d75857a5-4148-4745-89e2-1da7ddaf7999" exec="/usr/lib/scim-1.0/scim-launcher" nodisplay="true" taskmanage="false" multiple="false" type="capp" hw-acceleration="use-system-setting" mainapp="true">
+    <category name="http://tizen.org/category/ime"/>
+    <label>Default keyboard</label>
+    <label xml:lang="en-gb">Default keyboard</label>
+    <icon/>
+</ui-application>
+</manifest>

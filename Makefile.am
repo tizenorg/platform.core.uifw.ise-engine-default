@@ -25,10 +25,10 @@ AUX_DIST              = $(ac_aux_dir)/config.guess \
 			$(ac_aux_dir)/depcomp
 
 EXTRA_DIST = \
-	ChangeLog\
-	README	\
-	config.rpath	\
-	mkinstalldirs	\
+	ChangeLog \
+	README \
+	config.rpath \
+	mkinstalldirs \
 	bootstrap
 
 ## @end 1
@@ -42,6 +42,9 @@ CLEANFILES		= *.bak src/*.bak
 
 ## @end 1
 ACLOCAL			= aclocal -I $(ac_aux_dir)
+
+pkgdir	= $(ISF_PKGDIR)
+pkg_DATA	= ise-engine-default.xml
 
 ## @start 2
 ## docdir		= $(top_builddir)/doc

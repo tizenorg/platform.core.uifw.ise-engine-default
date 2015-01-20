@@ -74,12 +74,17 @@ if test "$enable_debug" = "yes"; then
 fi
 
 ISF_ICONDIR=`$PKG_CONFIG --variable=icondir scim`
+ISF_PKGDIR=`$PKG_CONFIG --variable=pkgdir scim`
 ISF_MODULEDIR=`$PKG_CONFIG --variable=moduledir scim`
 ISF_DATADIR=`$PKG_CONFIG --variable=scimdatadir scim`
 ISF_LIBDIR=`$PKG_CONFIG --variable=libdir scim`
 
 if test "x$ISF_ICONDIR" = "x"; then
   ISF_ICONDIR=${datadir}/scim/icons
+fi
+
+if test "x$ISF_PKGDIR" = "x"; then
+  ISF_PKGDIR=${datadir}/packages
 fi
 
 if test "x$ISF_MODULEDIR" = "x"; then
@@ -95,6 +100,7 @@ if test "x$ISF_LIBDIR" = "x"; then
 fi
 
 AC_SUBST(ISF_ICONDIR)
+AC_SUBST(ISF_PKGDIR)
 AC_SUBST(ISF_MODULEDIR)
 AC_SUBST(ISF_DATADIR)
 AC_SUBST(ISF_LIBDIR)

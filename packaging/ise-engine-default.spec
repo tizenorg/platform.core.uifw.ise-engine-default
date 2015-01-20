@@ -31,4 +31,5 @@ install -m0644 %{_builddir}/%{buildsubdir}/LICENSE.APLv2 %{buildroot}%{_datadir}
 %defattr(-,root,root,-)
 %{_libdir}/scim-1.0/1.4.0/IMEngine/ise-engine-default.so
 %{_datadir}/scim/icons/isf-default.png
+%{_datadir}/packages/*
 %{_datadir}/license/%{name}
