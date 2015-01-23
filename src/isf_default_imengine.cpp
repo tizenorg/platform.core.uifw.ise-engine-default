@@ -187,7 +187,7 @@ DefaultInstance::DefaultInstance(DefaultFactory * factory,
 
 	for (int i = 1; i < 10; ++i) {
 		label[0] = '0' + i;
-		labels.push_back(utf8_mbstowcs(label));
+		labels.push_back(utf8_mbstowcs(String(label)));
 	}
 
 	m_lookup_table.set_candidate_labels(labels);
