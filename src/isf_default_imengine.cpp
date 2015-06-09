@@ -52,7 +52,7 @@
 #define bind_textdomain_codeset(domain,codeset)
 #endif
 
-#define DEFAULT_UUID "d75857a5-4148-4745-89e2-1da7ddaf7999"
+#define DEFAULT_UUID "org.tizen.ise-engine-default"
 #define DEFAULT_NAME "Multilingual Keyboard"
 
 #define UTF8_SIZE                       6

@@ -4,7 +4,7 @@
 <description/>
 <label>Default keyboard</label>
 <icon/>
-<ui-application appid="d75857a5-4148-4745-89e2-1da7ddaf7999" exec="/usr/lib/scim-1.0/scim-launcher" nodisplay="true" taskmanage="false" multiple="false" type="capp" hw-acceleration="use-system-setting" mainapp="true">
+<ui-application appid="org.tizen.ise-engine-default" exec="/usr/lib/scim-1.0/scim-launcher" nodisplay="true" taskmanage="false" multiple="false" type="capp" hw-acceleration="use-system-setting" mainapp="true">
     <category name="http://tizen.org/category/ime"/>
     <label>Default keyboard</label>
     <label xml:lang="en-gb">Default keyboard</label>
