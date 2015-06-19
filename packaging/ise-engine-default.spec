@@ -27,6 +27,9 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_datadir}/license
 install -m0644 %{_builddir}/%{buildsubdir}/LICENSE.APLv2 %{buildroot}%{_datadir}/license/%{name}
 
+%post
+pkg_initdb
+
 %files
 %defattr(-,root,root,-)
 %{_libdir}/scim-1.0/1.4.0/IMEngine/ise-engine-default.so
