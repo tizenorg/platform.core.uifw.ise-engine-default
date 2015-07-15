@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(ise-default, 1.0.0, li2012.zhang@samsung.com)
+AC_INIT(ise-engine-default, 1.0.0, li2012.zhang@samsung.com)
 AC_CONFIG_SRCDIR([src/isf_default_imengine.cpp])
 
 # Save this value here, since automake will set cflags and cxxflags later
