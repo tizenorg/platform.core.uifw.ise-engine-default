@@ -34,6 +34,7 @@ pkg_initdb
 pkg_initdb
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_libdir}/scim-1.0/1.4.0/IMEngine/ise-engine-default.so
 %{_datadir}/scim/icons/isf-default.png
