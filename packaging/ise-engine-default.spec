@@ -28,10 +28,8 @@ mkdir -p %{buildroot}%{_datadir}/license
 install -m0644 %{_builddir}/%{buildsubdir}/LICENSE.APLv2 %{buildroot}%{_datadir}/license/%{name}
 
 %post
-pkg_initdb
 
 %postun
-pkg_initdb
 
 %files
 %manifest %{name}.manifest
