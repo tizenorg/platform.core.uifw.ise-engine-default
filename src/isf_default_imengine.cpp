@@ -159,7 +159,7 @@ String DefaultFactory::get_icon_file() const {
 
 void DefaultFactory::reload_config(const ConfigPointer & config) {
 	if (config.null()) return;
-	int hw_detected = config->read(String (ISF_CONFIG_HARDWARE_KEYBOARD_DETECT) , hw_detected);
+	int hw_detected = config->read(String (ISF_CONFIG_HARDWARE_KEYBOARD_DETECT), 1);
 	if (hw_detected == 1)
 		m_keypad_layout = I_HQD;
 }
