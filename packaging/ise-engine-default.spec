@@ -1,6 +1,6 @@
 Name:       ise-engine-default
 Summary:    Multilingual Keyboard ISE
-Version:    1.0.1
+Version:    1.0.2
 Release:    1
 Group:      Graphics & UI Framework/Input
 License:    Apache-2.0
