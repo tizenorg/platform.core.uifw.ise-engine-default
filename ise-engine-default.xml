@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="2.3" package="ise-engine-default" type="rpm" version="1.0.2" install-location="internal-only">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="2.3" package="ise-engine-default" type="rpm" version="1.0.3" install-location="internal-only">
 <author/>
 <description/>
 <label>Default keyboard</label>
