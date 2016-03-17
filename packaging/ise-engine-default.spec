@@ -15,6 +15,8 @@ it is based on Input Service Framework(ISF).
 %setup -q
 
 %build
+export CFLAGS+=" -Werror"
+export CXXFLAGS+=" -Werror"
 ./bootstrap
 %autogen
 %configure --prefix=%{_prefix} --disable-static
