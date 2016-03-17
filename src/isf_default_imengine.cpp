@@ -309,22 +309,22 @@ void DefaultInstance::process_helper_event(const String & helper_uuid,
 	if (!(const_cast < Transaction & >(trans)).get_command(cmd)) return;
 	if (!(const_cast < Transaction & >(trans)).get_data(value)) return;
 
-    switch (cmd) {
-        case DEFAULT_CMD_LANGUAGE:
-            m_lang = value;
-            if (m_lang >= IM_LANGUAGE_CNT) {
-                m_lang = IM_LANGUAGE_ENGLISH;
-            }
-            break;
-        case DEFAULT_CMD_SHIFTMODE:
-            m_shift_pressed = (Mode_Shift)value;
-            break;
-        case DEFAULT_CMD_KEYPAD:
-            m_keypad_layout = value;
-            break;
-        default:
-            break;
-    }
+	switch (cmd) {
+		case DEFAULT_CMD_LANGUAGE:
+			m_lang = value;
+			if (m_lang >= IM_LANGUAGE_CNT) {
+				m_lang = IM_LANGUAGE_ENGLISH;
+			}
+			break;
+		case DEFAULT_CMD_SHIFTMODE:
+			m_shift_pressed = (Mode_Shift)value;
+			break;
+		case DEFAULT_CMD_KEYPAD:
+			m_keypad_layout = value;
+			break;
+		default:
+			break;
+	}
 }
 
 void DefaultInstance::reset_option() {
