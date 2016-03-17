@@ -42,14 +42,14 @@
 
 #ifdef HAVE_GETTEXT
 #include <libintl.h>
-#define _(String) dgettext(GETTEXT_PACKAGE,String)
+#define _(String) dgettext(GETTEXT_PACKAGE, String)
 #define N_(String) (String)
 #else
 #define _(String) (String)
 #define N_(String) (String)
-#define bindtextdomain(Package,Directory)
+#define bindtextdomain(Package, Directory)
 #define textdomain(domain)
-#define bind_textdomain_codeset(domain,codeset)
+#define bind_textdomain_codeset(domain, codeset)
 #endif
 
 #define DEFAULT_UUID "org.tizen.ise-engine-default"
@@ -159,7 +159,7 @@ String DefaultFactory::get_icon_file() const {
 
 void DefaultFactory::reload_config(const ConfigPointer & config) {
 	if (config.null()) return;
-	int hw_detected = config->read(String (ISF_CONFIG_HARDWARE_KEYBOARD_DETECT), 1);
+	int hw_detected = config->read(String(ISF_CONFIG_HARDWARE_KEYBOARD_DETECT), 1);
 	if (hw_detected == 1)
 		m_keypad_layout = I_HQD;
 }
@@ -281,7 +281,7 @@ bool DefaultInstance::_process_keypress(const KeyEvent & key_raw) {
 }
 
 bool DefaultInstance::keypad_process_qwerty(KeyEvent & key) {
-	unsigned char buf[UTF8_SIZE + 1] = {0,};
+	unsigned char buf[UTF8_SIZE + 1] = {0, };
 
 	/* in case of Alphabet chars */
 	if (key.code >= 0xfd00)
@@ -309,19 +309,23 @@ void DefaultInstance::process_helper_event(const String & helper_uuid,
 	if (!(const_cast < Transaction & >(trans)).get_command(cmd)) return;
 	if (!(const_cast < Transaction & >(trans)).get_data(value)) return;
 
-	if (DEFAULT_CMD_LANGUAGE == cmd) {
-		m_lang = value;
-		if (m_lang >= IM_LANGUAGE_CNT) {
-			m_lang = IM_LANGUAGE_ENGLISH;
-		}
-	} else if (DEFAULT_CMD_COMPLETION == cmd) {
-
-	} else if (DEFAULT_CMD_SHIFTMODE == cmd) {
-		m_shift_pressed = (Mode_Shift)value;
-	} else if (DEFAULT_CMD_KEYPAD == cmd) {
-		m_keypad_layout = value;
-	}
+    switch (cmd) {
+        case DEFAULT_CMD_LANGUAGE:
+            m_lang = value;
+            if (m_lang >= IM_LANGUAGE_CNT) {
+                m_lang = IM_LANGUAGE_ENGLISH;
+            }
+            break;
+        case DEFAULT_CMD_SHIFTMODE:
+            m_shift_pressed = (Mode_Shift)value;
+            break;
+        case DEFAULT_CMD_KEYPAD:
+            m_keypad_layout = value;
+            break;
+        default:
+            break;
+    }
 }
 
-void DefaultInstance::reset_option () {
+void DefaultInstance::reset_option() {
 }

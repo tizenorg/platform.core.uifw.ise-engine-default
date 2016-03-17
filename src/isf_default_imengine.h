@@ -245,10 +245,9 @@ class DefaultInstance:public IMEngineInstanceBase {
 	/**
 	* @brief invoke by setting.
 	*/
-	virtual void reset_option ();
+	virtual void reset_option();
 
  private:
-
 	/**
 	 * @brief Process a key release event.
 	 *
