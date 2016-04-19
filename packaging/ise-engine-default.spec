@@ -17,17 +17,15 @@ it is based on Input Service Framework(ISF).
 %build
 export CFLAGS+=" -Werror"
 export CXXFLAGS+=" -Werror"
-./bootstrap
 %autogen
 %configure --prefix=%{_prefix} --disable-static
 
-make %{?jobs:-j%jobs}
+make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
+
 %make_install
-mkdir -p %{buildroot}%{_datadir}/license
-install -m0644 %{_builddir}/%{buildsubdir}/LICENSE.APLv2 %{buildroot}%{_datadir}/license/%{name}
 
 %post
 
@@ -39,4 +37,4 @@ install -m0644 %{_builddir}/%{buildsubdir}/LICENSE.APLv2 %{buildroot}%{_datadir}
 %{_libdir}/scim-1.0/1.4.0/IMEngine/ise-engine-default.so
 %{_datadir}/scim/icons/isf-default.png
 %{_datadir}/packages/*
-%{_datadir}/license/%{name}
+%license LICENSE.APLv2
